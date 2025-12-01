@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: food-management-system
+
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: phyozawoo612@gmail.com
+    password: bbee zxia zkgh mijv   # 16-character Gmail app password
+    protocol: smtp
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            trust: smtp.gmail.com
+
+  spring:
+    cache:
+      type: redis
+    redis:
+      host: localhost
+      port: 6379
+
+
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+aws:
+  dynamodb:
+    access-key: 33xpa
+    secret-key : tv48cj
+    end-point:
+      url: http://localhost:8000
+
+
+
+
