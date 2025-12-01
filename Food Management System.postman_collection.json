@@ -1,0 +1,849 @@
+{
+  "info": {
+    "_postman_id": "7d1009ec-dbd3-408c-b531-afd83b02841f",
+    "name": "Food Management System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "register",
+      "id": "ff85f66b-f298-411b-acb1-d77f05aff8cd",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b28zQGdtYWlsLmNvbSIsInVzZXJJZCI6ImE0MDYwNDMwLTIwOTktNDBjMS05NmU4LTIwMjkyNWI0NGRiNSIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NjQyMTY5NTMsImV4cCI6MTc2NDI1Mjk1M30.iWZxEd6LhCB2PWpraGiiwjkjsmDdL1CZG_-_SgJEdFYPM78t1FautDwRxa7M8Z8Uo5ggBXFOi41vZb2NjQKNug",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\" : \"User\",\n    \"email\" : \"user@gmail.com\",\n    \"password\" : \"12345678\",\n    \"role\": \"USER\"\n   \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/auth/register",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "register"
+          ]
+        }
+      }
+    },
+    {
+      "name": "add restaurant",
+      "id": "e7eb4412-73d4-492c-85a8-64e7b510933e",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b282MTJAZ21haWwuY29tIiwidXNlcklkIjoiMThjMDU4MGMtYmU5OC00YWQ5LTkxMDgtMmVhOTk3NzVkMjkxIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NjQyMzc0NTIsImV4cCI6MTc2NDI3MzQ1Mn0.TkD1WHy2tN6f5ITwcbfqe0PygT8Ytf38A8eGd0d_9j7pQ1bLDhi_PgjF4Dtrv2WGqhivy1nCUHuVei9vSfu8ng",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \n \n  \"phone\" : \"0987654321\"\n  \n   \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/restaurant",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "restaurant"
+          ]
+        }
+      }
+    },
+    {
+      "name": "add menu",
+      "id": "9fe8d456-e6ab-49c7-b332-e14e4b9ba46f",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b282MTJAZ21haWwuY29tIiwidXNlcklkIjoiMThjMDU4MGMtYmU5OC00YWQ5LTkxMDgtMmVhOTk3NzVkMjkxIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NjQzMjQ2NjEsImV4cCI6MTc2NDMyODI2MX0.HiJDG69Ig6eDWT_uqSqiiI7BbeaepoR1lpkV6zKFRWbWqSu4Gi1PSNaR0IP4mBkuL4CGB24wyA_UWjivAv4jIg",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"restaurantId\" : \"62f6ec52-9a6c-450f-8c5a-54f9dc6064ea\",\n    \"name\": \"Cheese Cake\",\n    \"description\": \"Cheese Cake\",\n    \"price\" : 10000\n   \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/menu",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "menu"
+          ]
+        }
+      }
+    },
+    {
+      "name": "place order",
+      "id": "37813435-d87c-49ef-88f1-be31ec5f2425",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0cGh5bzE0MEBnbWFpbC5jb20iLCJ1c2VySWQiOiJhZjZmNTI0Ni1lYTFiLTQwNmUtOTAxZi05MjcxNzRmNzhhNzEiLCJyb2xlcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNzY0NDc3MDg0LCJleHAiOjE3NjQ0ODA2ODR9.ZIIt3EsCOiDprnQxzTo3rXf84jrOBQHYS9oTsweSFWvp79Hiw8hsUTXdj6KNhMDimI4TdWtlC9nNbHPEfj_eZQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"restaurantId\": \"62f6ec52-9a6c-450f-8c5a-54f9dc6064ea\",\n  \"items\": [\n    {\n      \"menuItemId\": \"2131ab0d-6a7e-4f8e-b0ab-0cd794d494f5\",\n      \"quantity\": 2\n    },\n    {\n      \"menuItemId\": \"68a7d72d-55c5-445e-a24a-1e2ce22b82d4\",\n      \"quantity\": 2\n    },\n    {\n      \"menuItemId\": \"1be66fd0-33f6-4afa-8a39-57c5cd8b7770\",\n      \"quantity\": 2\n    }\n  ]\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/order",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "order"
+          ]
+        }
+      }
+    },
+    {
+      "name": "get order by order id",
+      "id": "122a9768-f243-4983-af83-249eeede5be3",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0cGh5bzE0MEBnbWFpbC5jb20iLCJ1c2VySWQiOiJhZjZmNTI0Ni1lYTFiLTQwNmUtOTAxZi05MjcxNzRmNzhhNzEiLCJyb2xlcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNzY0NDc3MDg0LCJleHAiOjE3NjQ0ODA2ODR9.ZIIt3EsCOiDprnQxzTo3rXf84jrOBQHYS9oTsweSFWvp79Hiw8hsUTXdj6KNhMDimI4TdWtlC9nNbHPEfj_eZQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw",
+          "raw": "\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/order/bde6ae81-64ce-4d60-88f1-84570c59decc",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "order",
+            "bde6ae81-64ce-4d60-88f1-84570c59decc"
+          ]
+        }
+      }
+    },
+    {
+      "name": "get all orders",
+      "id": "1dbf4701-9b44-44b4-9366-7b9639972cff",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b282MTJAZ21haWwuY29tIiwidXNlcklkIjoiMThjMDU4MGMtYmU5OC00YWQ5LTkxMDgtMmVhOTk3NzVkMjkxIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NjQ0Nzc3NDQsImV4cCI6MTc2NDQ4MTM0NH0.SCxxKAFcBgQ2Bs7541vj3VNDiZsLfeLEszSR0G8nNGasnHiJ5GFsxp6bSNSgVZq5tBxsiNYEoZkkQWdH02oQEw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw",
+          "raw": "\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/order",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "order"
+          ]
+        }
+      }
+    },
+    {
+      "name": "get order by customer id",
+      "id": "affbc291-65b8-45e7-ab9d-3fb132526d41",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b282MTJAZ21haWwuY29tIiwidXNlcklkIjoiMThjMDU4MGMtYmU5OC00YWQ5LTkxMDgtMmVhOTk3NzVkMjkxIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NjQxMjk5OTQsImV4cCI6MTc2NDE2NTk5NH0.51-tYDEwFFQTC3OYeC2DNUxCHdUo1fZhOtCz91393SYVgSzsZAF7ka9RdXygX5GH9kAh8_wZRRU7QD_QSmKQOA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw",
+          "raw": "\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/order/user/af6f5246-ea1b-406e-901f-927174f78a71",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "order",
+            "user",
+            "af6f5246-ea1b-406e-901f-927174f78a71"
+          ]
+        }
+      }
+    },
+    {
+      "name": "update order status",
+      "id": "90e5e215-7f2e-4ae2-9db7-976d142dbc8e",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b282MTJAZ21haWwuY29tIiwidXNlcklkIjoiMThjMDU4MGMtYmU5OC00YWQ5LTkxMDgtMmVhOTk3NzVkMjkxIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NjQ0Nzg4ODgsImV4cCI6MTc2NDQ4MjQ4OH0.Qw33rh8RCdCePj45FxajgOPSj4nycY4sKdJSnVisJoFSTH2zvN6O5FIiDbxj-zrF7nKFKVEPIA2ZFqVeWqum2A",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "body": {
+          "mode": "raw",
+          "raw": "\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/order/bde6ae81-64ce-4d60-88f1-84570c59decc/status?status=DELIVERED",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "order",
+            "bde6ae81-64ce-4d60-88f1-84570c59decc",
+            "status"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "DELIVERED"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "login",
+      "id": "4b119b94-b941-4d20-b414-894fce94ab67",
+      "request": {
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n   \"email\" : \"tphyo140@gmail.com\",\n   \"password\" : \"12345678\"\n   \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/auth/login",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "login"
+          ]
+        }
+      }
+    },
+    {
+      "name": "get all users",
+      "id": "4afe25c4-2403-4e71-8fdb-c45cc29b46ac",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b282MTJAZ21haWwuY29tIiwidXNlcklkIjoiMThjMDU4MGMtYmU5OC00YWQ5LTkxMDgtMmVhOTk3NzVkMjkxIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NjQyMzc0NTIsImV4cCI6MTc2NDI3MzQ1Mn0.TkD1WHy2tN6f5ITwcbfqe0PygT8Ytf38A8eGd0d_9j7pQ1bLDhi_PgjF4Dtrv2WGqhivy1nCUHuVei9vSfu8ng",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/user",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "user"
+          ]
+        }
+      }
+    },
+    {
+      "name": "get menu by restaurant id",
+      "id": "a506cc07-34b8-493a-a18c-87ae7501722d",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b282MTJAZ21haWwuY29tIiwidXNlcklkIjoiMThjMDU4MGMtYmU5OC00YWQ5LTkxMDgtMmVhOTk3NzVkMjkxIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NjQzMjQ2NjEsImV4cCI6MTc2NDMyODI2MX0.HiJDG69Ig6eDWT_uqSqiiI7BbeaepoR1lpkV6zKFRWbWqSu4Gi1PSNaR0IP4mBkuL4CGB24wyA_UWjivAv4jIg",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/menu/restaurant/62f6ec52-9a6c-450f-8c5a-54f9dc6064ea",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "menu",
+            "restaurant",
+            "62f6ec52-9a6c-450f-8c5a-54f9dc6064ea"
+          ]
+        }
+      }
+    },
+    {
+      "name": "get menu by menu id",
+      "id": "10f14bab-b8f6-4f65-92fe-2b8b7a108382",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b282MTJAZ21haWwuY29tIiwidXNlcklkIjoiMThjMDU4MGMtYmU5OC00YWQ5LTkxMDgtMmVhOTk3NzVkMjkxIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NjQxMjk0OTEsImV4cCI6MTc2NDE2NTQ5MX0.Ld6HTEBfHb3bQOK4XKwTv7XPiVbWP9yK9FwOTSJzigXj32ajfmtI9mizoZoCEEADW6C0HdGoi8Nk6xjv0eXFCA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/menu/menu/2131ab0d-6a7e-4f8e-b0ab-0cd794d494f5",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "menu",
+            "menu",
+            "2131ab0d-6a7e-4f8e-b0ab-0cd794d494f5"
+          ]
+        }
+      }
+    },
+    {
+      "name": "get user by id",
+      "id": "ab252ecc-91bf-4f82-bac3-b5f14bf83ff6",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b282MTJAZ21haWwuY29tIiwidXNlcklkIjoiMThjMDU4MGMtYmU5OC00YWQ5LTkxMDgtMmVhOTk3NzVkMjkxIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NjQyMzc0NTIsImV4cCI6MTc2NDI3MzQ1Mn0.TkD1WHy2tN6f5ITwcbfqe0PygT8Ytf38A8eGd0d_9j7pQ1bLDhi_PgjF4Dtrv2WGqhivy1nCUHuVei9vSfu8ng",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/user/18c0580c-be98-4ad9-9108-2ea99775d",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "user",
+            "18c0580c-be98-4ad9-9108-2ea99775d"
+          ]
+        }
+      }
+    },
+    {
+      "name": "get restaurant by id",
+      "id": "9968dd12-c176-44a6-956b-0bd9d15130f0",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b282MTJAZ21haWwuY29tIiwidXNlcklkIjoiMThjMDU4MGMtYmU5OC00YWQ5LTkxMDgtMmVhOTk3NzVkMjkxIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NjQyMzc0NTIsImV4cCI6MTc2NDI3MzQ1Mn0.TkD1WHy2tN6f5ITwcbfqe0PygT8Ytf38A8eGd0d_9j7pQ1bLDhi_PgjF4Dtrv2WGqhivy1nCUHuVei9vSfu8ng",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/restaurant/a17b64fd-3969-418f-b42c-4b494c4",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "restaurant",
+            "a17b64fd-3969-418f-b42c-4b494c4"
+          ]
+        }
+      }
+    },
+    {
+      "name": "get all restaurants",
+      "id": "74fd32a7-a68f-4a52-8aeb-c5935cef7732",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b282MTJAZ21haWwuY29tIiwidXNlcklkIjoiMThjMDU4MGMtYmU5OC00YWQ5LTkxMDgtMmVhOTk3NzVkMjkxIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NjQyMzc0NTIsImV4cCI6MTc2NDI3MzQ1Mn0.TkD1WHy2tN6f5ITwcbfqe0PygT8Ytf38A8eGd0d_9j7pQ1bLDhi_PgjF4Dtrv2WGqhivy1nCUHuVei9vSfu8ng",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/restaurant",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "restaurant"
+          ]
+        }
+      }
+    },
+    {
+      "name": "update restaurant",
+      "id": "70d7f4f3-3a14-4fbf-a1bf-10c666479e76",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b282MTJAZ21haWwuY29tIiwidXNlcklkIjoiMThjMDU4MGMtYmU5OC00YWQ5LTkxMDgtMmVhOTk3NzVkMjkxIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NjQyMzc0NTIsImV4cCI6MTc2NDI3MzQ1Mn0.TkD1WHy2tN6f5ITwcbfqe0PygT8Ytf38A8eGd0d_9j7pQ1bLDhi_PgjF4Dtrv2WGqhivy1nCUHuVei9vSfu8ng",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\" :\"Update Lotteria\",\n    \"address\": \"Updated YGN\",\n    \"phone\" : \"Updated 0987654321\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/restaurant/a17b64fd-3969-418f-b42c-4b494c48",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "restaurant",
+            "a17b64fd-3969-418f-b42c-4b494c48"
+          ]
+        }
+      }
+    },
+    {
+      "name": "update menu",
+      "id": "0c15e31c-db43-4e80-940c-9e3c0613748c",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b282MTJAZ21haWwuY29tIiwidXNlcklkIjoiMThjMDU4MGMtYmU5OC00YWQ5LTkxMDgtMmVhOTk3NzVkMjkxIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NjQzMjY0NTYsImV4cCI6MTc2NDMzMDA1Nn0.hRmILzKFL1rkOWWkkjaCJkt9lJ4_B5QsbwVgbuAHMJqs4VZEQPvopaV_MFk9mWnqqFKi5kzwi9ZAy3ORehW5jQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"restaurantId\" : \"62f6ec52-9a6c-450f-8c5a-54f9dc6064ea\",\n    \"name\": \"Updated Cheese Cake\",\n    \"description\": \"Updated Cheese Cake\",\n    \"price\" : 10000\n   \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/menu/e6ddd717-dd5f-4899-914c-fb3748ac5818",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "menu",
+            "e6ddd717-dd5f-4899-914c-fb3748ac5818"
+          ]
+        }
+      }
+    },
+    {
+      "name": "delete menu",
+      "id": "01be6625-210e-40ee-bf6f-ad21f39e0299",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b28zQGdtYWlsLmNvbSIsInVzZXJJZCI6ImE0MDYwNDMwLTIwOTktNDBjMS05NmU4LTIwMjkyNWI0NGRiNSIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NjM5NzkxMzgsImV4cCI6MTc2NDAxNTEzOH0.6BN0XFxBfq-leT5abyn50BhSPPRdjRDYIMpp9xmMZUWalquv95x0LOK9CaJYe2QzaculRLnzRwZKp0UdDsIHSw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"restaurantId\" : \"62f6ec52-9a6c-450f-8c5a-54f9dc6064ea\",\n    \"name\": \"Updated Cheese Cake\",\n    \"description\": \"Updated Cheese Cake\",\n    \"price\" : 10000\n   \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/menu/a92bd03d-333a-49b4-b2dc-96d649e7bb2d",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "menu",
+            "a92bd03d-333a-49b4-b2dc-96d649e7bb2d"
+          ]
+        }
+      }
+    },
+    {
+      "name": "delete restaurant",
+      "id": "ce03c743-01f6-4d03-9680-5bdcc93a16c5",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b28zQGdtYWlsLmNvbSIsInVzZXJJZCI6ImE0MDYwNDMwLTIwOTktNDBjMS05NmU4LTIwMjkyNWI0NGRiNSIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NjM5NzE3MTcsImV4cCI6MTc2NDAwNzcxN30.GhBI5sycSf2Bv2YbY4imRQohHVNYrEx4ypkKKRa8ZJI6gAGBES0Cx0XP0T0szsDIO4mW-V6Z9O1pNd7fqWDC-g",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\" :\"Update JDONUT\",\n    \"address\": \"Updated TGI\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/restaurant/0ff8707d-e925-4467-8c1e-9c006c585d29",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "restaurant",
+            "0ff8707d-e925-4467-8c1e-9c006c585d29"
+          ]
+        }
+      }
+    },
+    {
+      "name": "delete user",
+      "id": "d8cbc99e-3a93-4c9d-b7be-5e674d638e93",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b282MTJAZ21haWwuY29tIiwidXNlcklkIjoiMThjMDU4MGMtYmU5OC00YWQ5LTkxMDgtMmVhOTk3NzVkMjkxIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NjQyMzc0NTIsImV4cCI6MTc2NDI3MzQ1Mn0.TkD1WHy2tN6f5ITwcbfqe0PygT8Ytf38A8eGd0d_9j7pQ1bLDhi_PgjF4Dtrv2WGqhivy1nCUHuVei9vSfu8ng",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n   \"email\" : \"phyozawoo612@gmail.com\",\n   \"password\" : \"12345678\"\n   \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/user/a4060430-2099-40c1-96e8-202925b44db5",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "user",
+            "a4060430-2099-40c1-96e8-202925b44db5"
+          ]
+        }
+      }
+    },
+    {
+      "name": "update user",
+      "id": "1ac21ec1-e6de-49de-8555-555d85c69a7b",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaHlvemF3b282MTJAZ21haWwuY29tIiwidXNlcklkIjoiMThjMDU4MGMtYmU5OC00YWQ5LTkxMDgtMmVhOTk3NzVkMjkxIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NjQyMzc0NTIsImV4cCI6MTc2NDI3MzQ1Mn0.TkD1WHy2tN6f5ITwcbfqe0PygT8Ytf38A8eGd0d_9j7pQ1bLDhi_PgjF4Dtrv2WGqhivy1nCUHuVei9vSfu8ng",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\" : \"Phyo Zaw Oo4\",\n   \"email\" : \"phyozawoo4@gmail.com\"\n   \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/v1/user/6a2e4cfa-1112-4589-90f7-cf46339",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "user",
+            "6a2e4cfa-1112-4589-90f7-cf46339"
+          ]
+        }
+      }
+    }
+  ]
+}
